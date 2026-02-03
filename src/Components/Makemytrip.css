@@ -1,0 +1,25 @@
+.bg{
+    background: #a22323;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding: 55px;
+}
+
+.bot{
+    background: #fff;
+    height: 65vh;
+    width: 400px;
+
+    border-radius: 40px;
+ 
+}
+
+.top{
+  
+    height: 20px;
+    width: 50px;
+    background-color:milk white;
+}
