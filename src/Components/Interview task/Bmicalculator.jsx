@@ -1,6 +1,6 @@
 import React , {useState} from 'react'
 
-const Bmicalculator = () => {
+const Bmicalculator =() => {
     const[weight ,setWeight]=useState();
     const[height ,setHeight]=useState();
     
@@ -11,18 +11,18 @@ const[bmi, setBmi]=useState('');
 
     const calculatebmi =(e)=>{
     e.preventDefault();
-        const h = height / 100; 
-    const result = (weight / (h * h))
+        const h= height /100; 
+    const result= (weight /(h * h))
 
     setBmi(result);
 
-    if (bmi < 18.5) {
+    if (bmi< 18.5) {
       setResult("Underweight");
-} else if (bmi < 25) {
-      setResult("Normal weight");
-} else if (bmi < 30) {
+} else if(bmi< 25) {
+      setResult("Normalweight");
+} else if(bmi< 30) {
       setResult("Overweight");
-} else {
+} else{
       setResult("Obese");
     }
   
@@ -38,19 +38,20 @@ const[bmi, setBmi]=useState('');
           <input type="number" placeholder="Weight "value={weight} onChange={(e)=>setWeight(e.target.value)} />
         </div>
 
-        <div style={{ marginTop: "10px" }}> <input type="number" placeholder="Height" value={height} onChange={(e)=>setHeight(e.target.value)}/>
+        <div > 
+            <input type="number" placeholder="Height" value={height} onChange={(e)=>setHeight(e.target.value)}/>
         </div>
 
-        <button style={{ marginTop: "15px" }} type="submit"> calculate </button>
+        <button  type="submit"> calculate </button>
         
       </form>
-          {bmi && (
+          {
         <div >
-           BMI: {bmi}
+           BMI:{bmi}
            <br />
-          Status: {result}
+          Status:{result}
         </div>
-      )}
+      }
     </div>
 )}
 
